@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón del Genoma - Del ADN a las Proteínas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dna"></i>
+                <span>El Rincón del Genoma</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="dna-helix"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">El Rincón del Genoma</h1>
+            <p class="hero-subtitle">Del ADN a las proteínas, paso a paso</p>
+            <p class="hero-diversity">🌍 Descubre cómo la genética crea la diversidad de nuestro mundo 🌈</p>
+        </div>
+    </section>
+
+    <!-- Main Content with Tabs -->
+    <div class="main-container">
+        <div class="container">
+            <!-- Tab Navigation -->
+            <div class="tabs-navigation">
+                <button class="tab-btn active" data-tab="inicio">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </button>
+                <button class="tab-btn" data-tab="adn">
+                    <i class="fas fa-dna"></i>
+                    <span>ADN</span>
+                </button>
+                <button class="tab-btn" data-tab="arn">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>ARN</span>
+                </button>
+                <button class="tab-btn" data-tab="transcripcion">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Transcripción</span>
+                </button>
+                <button class="tab-btn" data-tab="traduccion">
+                    <i class="fas fa-cogs"></i>
+                    <span>Traducción</span>
+                </button>
+                <button class="tab-btn" data-tab="codigo">
+                    <i class="fas fa-code"></i>
+                    <span>Código Genético</span>
+                </button>
+                <button class="tab-btn" data-tab="proteinas">
+                    <i class="fas fa-cubes"></i>
+                    <span>Proteínas</span>
+                </button>
+                <button class="tab-btn" data-tab="diversidad">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Diversidad</span>
+                </button>
+                <button class="tab-btn" data-tab="aplicaciones">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Aplicaciones</span>
+                </button>
+                <button class="tab-btn" data-tab="recursos">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Recursos</span>
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tabs-content">
+                
+                <!-- TAB: Inicio -->
+                <div class="tab-pane active" id="tab-inicio">
+                    <div class="intro-welcome">
+                        <h2>¡Bienvenido al mundo de la genética! 🧬</h2>
+                        <p class="intro-text">
+                            El ADN contiene la información de la vida. A través del ARN, esa información se transforma en proteínas, que permiten que nuestro cuerpo funcione.
+                        </p>
+                        <p class="intro-diversity-text">
+                            🌈 <strong>¿Sabías que el ADN explica por qué somos diferentes?</strong> Cada persona, cada planta, cada animal tiene su propio ADN único. ¡Eso hace al mundo increíblemente diverso y hermoso!
+                        </p>
+                    </div>
+
+                    <div class="topics-grid">
+                        <div class="topic-card" onclick="changeTab('adn')">
+                            <i class="fas fa-dna"></i>
+                            <h3>ADN</h3>
+                            <p>La molécula de la vida</p>
+                        </div>
+                        <div class="topic-card" onclick="changeTab('arn')">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>ARN</h3>
+                            <p>El mensajero genético</p>
+                        </div>
+                        <div class="topic-card" onclick="changeTab('transcripcion')">
+                            <i class="fas fa-arrow-right"></i>
+                            <h3>Transcripción</h3>
+                            <p>De ADN a ARNm</p>
+                        </div>
+                        <div class="topic-card" onclick="changeTab('traduccion')">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Traducción</h3>
+                            <p>De ARN a proteína</p>
+                        </div>
+                        <div class="topic-card" onclick="changeTab('codigo')">
+                            <i class="fas fa-code"></i>
+                            <h3>Código Genético</h3>
+                            <p>El lenguaje de la vida</p>
+                        </div>
+                        <div class="topic-card" onclick="changeTab('proteinas')">
+                            <i class="fas fa-cubes"></i>
+                            <h3>Proteínas</h3>
+                            <p>Los constructores celulares</p>
+                        </div>
+                        <div class="topic-card diversity-card" onclick="changeTab('diversidad')">
+                            <i class="fas fa-globe-americas"></i>
+                            <h3>Diversidad Cultural y Biológica</h3>
+                            <p>🌍 Cómo el ADN crea un mundo diverso</p>
+                        </div>
+                        <div class="topic-card" onclick="changeTab('aplicaciones')">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Aplicaciones</h3>
+                            <p>Genética en acción</p>
+                        </div>
+                    </div>
+
+                    <div class="fun-fact-section">
+                        <div class="fun-fact-card" id="funFactCard">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Dato Curioso sobre Genética</h3>
+                            <p id="funFactText">Haz clic en el botón para descubrir datos fascinantes</p>
+                            <button class="fact-button" onclick="showRandomFact()">
+                                <i class="fas fa-sync-alt"></i> Nuevo Dato
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: ADN -->
+                <div class="tab-pane" id="tab-adn">
+                    <div class="concept-card">
+                        <div class="concept-header">
+                            <i class="fas fa-dna"></i>
+                            <h2>ADN (Ácido Desoxirribonucleico)</h2>
+                        </div>
+                        <div class="concept-content">
+                            <div class="concept-item">
+                                <h3>¿Qué es el ADN?</h3>
+                                <p>El ADN es la molécula que contiene toda la información genética de un ser vivo. Es como un manual de instrucciones que determina nuestras características.</p>
+                                <div class="info-box">
+                                    <p>💡 <strong>Para niños:</strong> Imagina que el ADN es como un libro de recetas gigante que dice cómo construir todo tu cuerpo: tu color de ojos, tu estatura, ¡todo!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-item">
+                                <h3>Estructura del ADN</h3>
+                                <ul>
+                                    <li><strong>Nucleótidos:</strong> Las unidades básicas del ADN, formadas por:
+                                        <ul>
+                                            <li>Una base nitrogenada (A, T, G, C)</li>
+                                            <li>Un azúcar (desoxirribosa)</li>
+                                            <li>Un grupo fosfato</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Doble Hélice:</strong> Dos cadenas de nucleótidos enrolladas en forma de escalera de caracol</li>
+                                </ul>
+                                
+                                <div class="visual-dna">
+                                    <h4>Visualización de la Doble Hélice</h4>
+                                    <div class="dna-structure">
+                                        <div class="dna-strand-vis">
+                                            <span class="base-pair">A — T</span>
+                                            <span class="base-pair">T — A</span>
+                                            <span class="base-pair">G — C</span>
+                                            <span class="base-pair">C — G</span>
+                                            <span class="base-pair">A — T</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-item">
+                                <h3>Función del ADN</h3>
+                                <p>Almacena y transmite la información genética necesaria para el desarrollo, funcionamiento y reproducción de todos los organismos vivos.</p>
+                                <div class="function-boxes">
+                                    <div class="func-box">
+                                        <i class="fas fa-save"></i>
+                                        <p>Almacena información</p>
+                                    </div>
+                                    <div class="func-box">
+                                        <i class="fas fa-copy"></i>
+                                        <p>Se replica</p>
+                                    </div>
+                                    <div class="func-box">
+                                        <i class="fas fa-share-alt"></i>
+                                        <p>Transmite herencia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: ARN -->
+                <div class="tab-pane" id="tab-arn">
+                    <div class="concept-card">
+                        <div class="concept-header">
+                            <i class="fas fa-project-diagram"></i>
+                            <h2>ARN (Ácido Ribonucleico)</h2>
+                        </div>
+                        <div class="concept-content">
+                            <div class="concept-item">
+                                <h3>¿Qué es el ARN?</h3>
+                                <p>El ARN es una molécula similar al ADN que actúa como intermediario en la síntesis de proteínas. Copia la información del ADN y la lleva a donde se necesita.</p>
+                            </div>
+                            
+                            <div class="concept-item">
+                                <h3>Diferencias entre ADN y ARN</h3>
+                                <div class="comparison-table">
+                                    <div class="comparison-row header-row">
+                                        <div class="comparison-cell">Característica</div>
+                                        <div class="comparison-cell">ADN</div>
+                                        <div class="comparison-cell">ARN</div>
+                                    </div>
+                                    <div class="comparison-row">
+                                        <div class="comparison-cell">Estructura</div>
+                                        <div class="comparison-cell">Doble cadena</div>
+                                        <div class="comparison-cell">Cadena simple</div>
+                                    </div>
+                                    <div class="comparison-row">
+                                        <div class="comparison-cell">Azúcar</div>
+                                        <div class="comparison-cell">Desoxirribosa</div>
+                                        <div class="comparison-cell">Ribosa</div>
+                                    </div>
+                                    <div class="comparison-row">
+                                        <div class="comparison-cell">Bases</div>
+                                        <div class="comparison-cell">A, T, G, C</div>
+                                        <div class="comparison-cell">A, U, G, C</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-item">
+                                <h3>Tipos de ARN</h3>
+                                <div class="rna-types">
+                                    <div class="rna-type-card">
+                                        <i class="fas fa-envelope"></i>
+                                        <h4>ARN mensajero (ARNm)</h4>
+                                        <p>Transporta la información genética del ADN desde el núcleo hasta los ribosomas.</p>
+                                    </div>
+                                    <div class="rna-type-card">
+                                        <i class="fas fa-truck"></i>
+                                        <h4>ARN de transferencia (ARNt)</h4>
+                                        <p>Transporta aminoácidos específicos al ribosoma durante la síntesis de proteínas.</p>
+                                    </div>
+                                    <div class="rna-type-card">
+                                        <i class="fas fa-industry"></i>
+                                        <h4>ARN ribosomal (ARNr)</h4>
+                                        <p>Forma parte de los ribosomas, la maquinaria donde se fabrican las proteínas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: Transcripción -->
+                <div class="tab-pane" id="tab-transcripcion">
+                    <div class="process-card">
+                        <h2><i class="fas fa-arrow-right"></i> Transcripción (ADN → ARNm)</h2>
+                        
+                        <div class="process-intro">
+                            <h3>¿Qué es la Transcripción?</h3>
+                            <p>La transcripción es el proceso mediante el cual se copia la información del ADN para crear una molécula de ARN mensajero (ARNm).</p>
+                            <div class="location-badge">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Ocurre en el núcleo celular</span>
+                            </div>
+                        </div>
+
+                        <div class="key-element">
+                            <h3><i class="fas fa-wrench"></i> Enzima clave: ARN Polimerasa</h3>
+                            <p>Es la enzima encargada de "leer" el ADN y sintetizar la cadena de ARNm complementaria.</p>
+                        </div>
+
+                        <div class="process-steps">
+                            <h3>Etapas de la Transcripción</h3>
+                            <div class="steps-container">
+                                <div class="step-card">
+                                    <div class="step-number">1</div>
+                                    <h4>Inicio</h4>
+                                    <p>La ARN polimerasa se une a una región promotora del ADN. La doble hélice comienza a desenrollarse.</p>
+                                    <div class="step-icon"><i class="fas fa-play"></i></div>
+                                </div>
+                                
+                                <div class="step-card">
+                                    <div class="step-number">2</div>
+                                    <h4>Elongación</h4>
+                                    <p>La ARN polimerasa avanza por el ADN, añadiendo nucleótidos complementarios para formar la cadena de ARNm.</p>
+                                    <div class="step-icon"><i class="fas fa-arrows-alt-h"></i></div>
+                                </div>
+                                
+                                <div class="step-card">
+                                    <div class="step-number">3</div>
+                                    <h4>Terminación</h4>
+                                    <p>Al llegar a una señal de terminación, la ARN polimerasa se suelta y el ARNm se libera.</p>
+                                    <div class="step-icon"><i class="fas fa-stop"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="visual-diagram">
+                            <h3>Esquema Visual del Proceso</h3>
+                            <div class="diagram-container">
+                                <div class="diagram-stage">
+                                    <div class="dna-strand">
+                                        <span class="base">A</span>
+                                        <span class="base">T</span>
+                                        <span class="base">G</span>
+                                        <span class="base">C</span>
+                                        <span class="base">T</span>
+                                    </div>
+                                    <div class="label">ADN</div>
+                                </div>
+                                <div class="arrow-down">
+                                    <i class="fas fa-arrow-down"></i>
+                                    <span>Transcripción</span>
+                                </div>
+                                <div class="diagram-stage">
+                                    <div class="rna-strand">
+                                        <span class="base rna">A</span>
+                                        <span class="base rna">U</span>
+                                        <span class="base rna">G</span>
+                                        <span class="base rna">C</span>
+                                        <span class="base rna">U</span>
+                                    </div>
+                                    <div class="label">ARNm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: Traducción -->
+                <div class="tab-pane" id="tab-traduccion">
+                    <div class="translation-content">
+                        <h2><i class="fas fa-cogs"></i> Traducción y Síntesis de Proteínas</h2>
+
+                        <div class="rna-roles">
+                            <div class="rna-role-card mrna">
+                                <div class="role-icon"><i class="fas fa-envelope"></i></div>
+                                <h3>ARNm (Mensajero)</h3>
+                                <ul>
+                                    <li>Transporta la información genética</li>
+                                    <li>Contiene codones (tripletes)</li>
+                                    <li>Es la "receta" para la proteína</li>
+                                </ul>
+                            </div>
+
+                            <div class="rna-role-card trna">
+                                <div class="role-icon"><i class="fas fa-truck"></i></div>
+                                <h3>ARNt (Transferencia)</h3>
+                                <ul>
+                                    <li>Transporta aminoácidos</li>
+                                    <li>Tiene anticodón</li>
+                                    <li>Actúa como "repartidor"</li>
+                                </ul>
+                            </div>
+
+                            <div class="rna-role-card rrna">
+                                <div class="role-icon"><i class="fas fa-industry"></i></div>
+                                <h3>ARNr (Ribosomal)</h3>
+                                <ul>
+                                    <li>Forma los ribosomas</li>
+                                    <li>Une los aminoácidos</li>
+                                    <li>Es la "fábrica"</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="translation-process">
+                            <h3>Proceso de la Traducción</h3>
+                            <div class="translation-steps">
+                                <div class="translation-step">
+                                    <div class="step-num">1</div>
+                                    <div class="step-content">
+                                        <h4>El ribosoma se une al ARNm</h4>
+                                        <p>El ribosoma se posiciona en el codón de inicio (AUG).</p>
+                                    </div>
+                                </div>
+
+                                <div class="translation-step">
+                                    <div class="step-num">2</div>
+                                    <div class="step-content">
+                                        <h4>El ARNt trae el aminoácido</h4>
+                                        <p>Cada ARNt transporta el aminoácido correcto.</p>
+                                    </div>
+                                </div>
+
+                                <div class="translation-step">
+                                    <div class="step-num">3</div>
+                                    <div class="step-content">
+                                        <h4>Los aminoácidos se unen</h4>
+                                        <p>Se forma una cadena de aminoácidos.</p>
+                                    </div>
+                                </div>
+
+                                <div class="translation-step">
+                                    <div class="step-num">4</div>
+                                    <div class="step-content">
+                                        <h4>Se forma la cadena proteica</h4>
+                                        <p>La proteína crece paso a paso.</p>
+                                    </div>
+                                </div>
+
+                                <div class="translation-step">
+                                    <div class="step-num">5</div>
+                                    <div class="step-content">
+                                        <h4>Terminación</h4>
+                                        <p>Codón de paro → Proteína completa ✓</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="interactive-translation">
+                            <h3>Simulación Interactiva</h3>
+                            <div class="simulation-box">
+                                <div class="simulation-display">
+                                    <div class="sim-mrna">
+                                        <span class="sim-label">ARNm:</span>
+                                        <span id="simMrna">AUG-UUU-GCA-UAA</span>
+                                    </div>
+                                    <div class="sim-protein">
+                                        <span class="sim-label">Proteína:</span>
+                                        <span id="simProtein">-</span>
+                                    </div>
+                                </div>
+                                <button class="sim-button" onclick="simulateTranslation()">
+                                    <i class="fas fa-play"></i> Iniciar Simulación
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: Código Genético -->
+                <div class="tab-pane" id="tab-codigo">
+                    <div class="genetic-code-content">
+                        <h2><i class="fas fa-code"></i> Código Genético (Agrupación de 3 en 3)</h2>
+
+                        <div class="code-explanation">
+                            <h3>¿Qué es un Codón?</h3>
+                            <p>Un codón es una secuencia de tres nucleótidos en el ARNm que especifica qué aminoácido debe añadirse a la proteína.</p>
+                            
+                            <div class="why-three">
+                                <h3>¿Por qué se lee de 3 en 3?</h3>
+                                <ul>
+                                    <li><strong>4 bases</strong> en el ARN: A, U, G, C</li>
+                                    <li>Si usáramos <strong>1 base</strong> = solo 4 aminoácidos (insuficiente)</li>
+                                    <li>Si usáramos <strong>2 bases</strong> = 4² = 16 aminoácidos (aún insuficiente)</li>
+                                    <li>Con <strong>3 bases</strong> = 4³ = <strong>64 codones</strong> (suficiente para 20 aminoácidos)</li>
+                                </ul>
+                            </div>
+
+                            <div class="special-codons">
+                                <div class="special-card start-codon">
+                                    <i class="fas fa-play-circle"></i>
+                                    <h4>Codón de Inicio</h4>
+                                    <p class="codon-display">AUG</p>
+                                    <p>Metionina - Marca el inicio</p>
+                                </div>
+                                <div class="special-card stop-codon">
+                                    <i class="fas fa-stop-circle"></i>
+                                    <h4>Codones de Terminación</h4>
+                                    <p class="codon-display">UAA, UAG, UGA</p>
+                                    <p>Señalan el final</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="genetic-table-container">
+                            <h3>Tabla Visual del Código Genético</h3>
+                            <div class="genetic-table" id="geneticTable"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: Proteínas -->
+                <div class="tab-pane" id="tab-proteinas">
+                    <div class="proteins-content">
+                        <h2><i class="fas fa-cubes"></i> Proteínas</h2>
+
+                        <div class="protein-intro">
+                            <h3>¿Qué son las Proteínas?</h3>
+                            <p>Las proteínas son moléculas grandes formadas por cadenas de aminoácidos. Son esenciales para la estructura, función y regulación de los tejidos y órganos del cuerpo.</p>
+                        </div>
+
+                        <div class="protein-functions">
+                            <h3>¿Para qué sirven?</h3>
+                            <div class="functions-grid">
+                                <div class="function-card">
+                                    <div class="function-icon"><i class="fas fa-child"></i></div>
+                                    <h4>Crecimiento</h4>
+                                    <p>Construcción de tejidos</p>
+                                </div>
+                                <div class="function-card">
+                                    <div class="function-icon"><i class="fas fa-shield-alt"></i></div>
+                                    <h4>Defensa</h4>
+                                    <p>Anticuerpos protectores</p>
+                                </div>
+                                <div class="function-card">
+                                    <div class="function-icon"><i class="fas fa-bolt"></i></div>
+                                    <h4>Energía</h4>
+                                    <p>Fuente alternativa</p>
+                                </div>
+                                <div class="function-card">
+                                    <div class="function-icon"><i class="fas fa-building"></i></div>
+                                    <h4>Estructura</h4>
+                                    <p>Músculos, piel, huesos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="protein-examples">
+                            <h3>Ejemplos Importantes</h3>
+                            <div class="examples-container">
+                                <div class="protein-example-card">
+                                    <i class="fas fa-tint"></i>
+                                    <h4>Hemoglobina</h4>
+                                    <p>Transporta oxígeno en la sangre</p>
+                                </div>
+                                <div class="protein-example-card">
+                                    <i class="fas fa-syringe"></i>
+                                    <h4>Insulina</h4>
+                                    <p>Regula el azúcar en sangre</p>
+                                </div>
+                                <div class="protein-example-card">
+                                    <i class="fas fa-atom"></i>
+                                    <h4>Enzimas</h4>
+                                    <p>Aceleran reacciones químicas</p>
+                                </div>
+                                <div class="protein-example-card">
+                                    <i class="fas fa-user-shield"></i>
+                                    <h4>Anticuerpos</h4>
+                                    <p>Defienden contra patógenos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: Diversidad Cultural y Biológica (NUEVO) -->
+                <div class="tab-pane" id="tab-diversidad">
+                    <div class="diversity-content">
+                        <h2><i class="fas fa-globe-americas"></i> Diversidad Cultural y Biológica</h2>
+                        
+                        <div class="diversity-intro">
+                            <p class="diversity-subtitle">🌈 El ADN explica por qué todos somos únicos y especiales 🌍</p>
+                        </div>
+
+                        <!-- Sección 1: Ejemplos que conectan cultura y biología -->
+                        <div class="diversity-section">
+                            <h3><i class="fas fa-link"></i> Cultura + Biología = Diversidad</h3>
+                            <p class="section-intro">Los niños comprenden mejor cuando ven cómo la biología se relaciona con su vida diaria:</p>
+                            
+                            <div class="diversity-examples">
+                                <div class="diversity-card food">
+                                    <div class="diversity-icon">🍲</div>
+                                    <h4>Comidas Típicas</h4>
+                                    <p><strong>Costa:</strong> Ceviche (pescado fresco)</p>
+                                    <p><strong>Sierra:</strong> Pachamanca (papas, maíz)</p>
+                                    <p><strong>Selva:</strong> Tacacho (plátano)</p>
+                                    <div class="bio-connection">
+                                        <strong>🧬 Conexión biológica:</strong> Cada región tiene diferentes alimentos porque los ecosistemas tienen distintas plantas y animales.
+                                    </div>
+                                </div>
+
+                                <div class="diversity-card traits">
+                                    <div class="diversity-icon">👥</div>
+                                    <h4>Rasgos Físicos Diversos</h4>
+                                    <p>Color de piel, altura, color de ojos</p>
+                                    <p>Forma de cabello, rasgos faciales</p>
+                                    <div class="bio-connection">
+                                        <strong>🧬 Conexión biológica:</strong> Estas diferencias vienen de nuestro ADN. Pequeñas variaciones genéticas crean toda esta hermosa diversidad.
+                                    </div>
+                                </div>
+
+                                <div class="diversity-card nature">
+                                    <div class="diversity-icon">🦜</div>
+                                    <h4>Animales y Plantas</h4>
+                                    <p><strong>Costa:</strong> Lobos marinos, algas</p>
+                                    <p><strong>Sierra:</strong> Llamas, quinua</p>
+                                    <p><strong>Selva:</strong> Guacamayos, caoba</p>
+                                    <div class="bio-connection">
+                                        <strong>🧬 Conexión biológica:</strong> Cada especie tiene su propio ADN adaptado a su ambiente.
+                                    </div>
+                                </div>
+
+                                <div class="diversity-card traditions">
+                                    <div class="diversity-icon">🎭</div>
+                                    <h4>Tradiciones y Naturaleza</h4>
+                                    <p>Inti Raymi (fiesta del sol)</p>
+                                    <p>Uso de plantas medicinales</p>
+                                    <p>Relación con animales sagrados</p>
+                                    <div class="bio-connection">
+                                        <strong>🧬 Conexión biológica:</strong> Las culturas se adaptan a su entorno biológico y crean tradiciones únicas.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección 2: Diversidad depende de la biología -->
+                        <div class="diversity-section">
+                            <h3><i class="fas fa-dna"></i> El ADN y las Diferencias Humanas</h3>
+                            
+                            <div class="dna-diversity-explanation">
+                                <div class="explanation-card">
+                                    <h4>🌍 Todos somos 99.9% iguales</h4>
+                                    <p>Todos los humanos compartimos el 99.9% de nuestro ADN. Ese 0.1% crea toda la diversidad que vemos.</p>
+                                </div>
+
+                                <div class="explanation-card">
+                                    <h4>🎨 Pequeñas variaciones = Gran diversidad</h4>
+                                    <p>Diferencias en:</p>
+                                    <ul>
+                                        <li>Color de piel (melanina)</li>
+                                        <li>Color de ojos (iris)</li>
+                                        <li>Altura y contextura</li>
+                                        <li>Tipo de cabello</li>
+                                    </ul>
+                                </div>
+
+                                <div class="explanation-card">
+                                    <h4>🌡️ El clima y la adaptación</h4>
+                                    <p><strong>Climas fríos:</strong> Personas con piel más clara (absorben vitamina D del sol)</p>
+                                    <p><strong>Climas cálidos:</strong> Personas con piel más oscura (protección solar natural)</p>
+                                </div>
+
+                                <div class="explanation-card important">
+                                    <h4>❤️ Mensaje importante</h4>
+                                    <p class="highlight-text">Nadie es "mejor" o "peor": solo somos diferentes. ¡Eso hace al mundo más interesante y hermoso!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección 3: Actividades Interactivas -->
+                        <div class="diversity-section">
+                            <h3><i class="fas fa-gamepad"></i> Actividades Interactivas</h3>
+                            
+                            <div class="activity-grid">
+                                <div class="activity-card">
+                                    <i class="fas fa-utensils"></i>
+                                    <h4>Adivina la Región</h4>
+                                    <p>Juego: ¿De qué región es este alimento?</p>
+                                    <button class="activity-btn" onclick="startFoodGame()">Jugar</button>
+                                    <div id="foodGameResult" class="game-result"></div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <i class="fas fa-leaf"></i>
+                                    <h4>Ecosistemas del Perú</h4>
+                                    <p>Compara plantas y animales de diferentes regiones</p>
+                                    <button class="activity-btn" onclick="showEcosystems()">Explorar</button>
+                                    <div id="ecosystemInfo" class="game-result"></div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <i class="fas fa-palette"></i>
+                                    <h4>¿Por qué tenemos diferentes colores de piel?</h4>
+                                    <p>Descubre cómo el ADN determina la melanina</p>
+                                    <button class="activity-btn" onclick="explainMelanin()">Aprender</button>
+                                    <div id="melaninInfo" class="game-result"></div>
+                                </div>
+
+                                <div class="activity-card">
+                                    <i class="fas fa-globe"></i>
+                                    <h4>Mapa de la Diversidad</h4>
+                                    <p>Explora cómo las personas se adaptan a diferentes climas</p>
+                                    <button class="activity-btn" onclick="showDiversityMap()">Ver Mapa</button>
+                                    <div id="mapInfo" class="game-result"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección 4: ADN y Diversidad -->
+                        <div class="diversity-section">
+                            <h3><i class="fas fa-heart"></i> Todos Venimos del Mismo ADN</h3>
+                            
+                            <div class="unity-message">
+                                <div class="unity-card">
+                                    <i class="fas fa-users"></i>
+                                    <h4>Somos una sola familia humana</h4>
+                                    <p>Todos los humanos tenemos el mismo tipo de ADN. Venimos de los mismos ancestros que vivieron en África hace miles de años.</p>
+                                </div>
+
+                                <div class="unity-card">
+                                    <i class="fas fa-dna"></i>
+                                    <h4>Pequeñas variaciones genéticas</h4>
+                                    <p>Con el tiempo, las personas se movieron a diferentes lugares. El ADN cambió un poquito para adaptarse al clima y al ambiente.</p>
+                                </div>
+
+                                <div class="unity-card">
+                                    <i class="fas fa-rainbow"></i>
+                                    <h4>La diversidad nos hace fuertes</h4>
+                                    <p>Diferentes culturas, idiomas, comidas, tradiciones... ¡todo esto hace que el mundo sea un lugar increíble para vivir!</p>
+                                </div>
+                            </div>
+
+                            <div class="final-message">
+                                <h4>💫 Recuerda siempre:</h4>
+                                <p class="big-text">Cada persona es única y especial. La diversidad no nos separa, ¡nos une! 🌈</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: Aplicaciones -->
+                <div class="tab-pane" id="tab-aplicaciones">
+                    <div class="applications-content">
+                        <h2><i class="fas fa-lightbulb"></i> Aplicaciones de la Genética</h2>
+                        
+                        <div class="applications-grid">
+                            <div class="application-card">
+                                <i class="fas fa-heartbeat"></i>
+                                <h3>Medicina Genética</h3>
+                                <p>Diagnóstico y tratamiento de enfermedades hereditarias</p>
+                            </div>
+
+                            <div class="application-card">
+                                <i class="fas fa-syringe"></i>
+                                <h3>Vacunas</h3>
+                                <p>Vacunas de ARNm (como las de COVID-19)</p>
+                            </div>
+
+                            <div class="application-card">
+                                <i class="fas fa-seedling"></i>
+                                <h3>Agricultura</h3>
+                                <p>Cultivos resistentes y nutritivos</p>
+                            </div>
+
+                            <div class="application-card">
+                                <i class="fas fa-fingerprint"></i>
+                                <h3>Ciencias Forenses</h3>
+                                <p>Identificación por ADN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: Recursos -->
+                <div class="tab-pane" id="tab-recursos">
+                    <div class="resources-content">
+                        <h2><i class="fas fa-graduation-cap"></i> Recursos Educativos</h2>
+
+                        <div class="resource-card">
+                            <h3><i class="fas fa-book"></i> Glosario de Términos</h3>
+                            <div class="glossary-grid">
+                                <div class="glossary-item">
+                                    <strong>ADN:</strong> Molécula que contiene información genética
+                                </div>
+                                <div class="glossary-item">
+                                    <strong>ARN:</strong> Mensajero que copia información del ADN
+                                </div>
+                                <div class="glossary-item">
+                                    <strong>Codón:</strong> Secuencia de 3 nucleótidos
+                                </div>
+                                <div class="glossary-item">
+                                    <strong>Proteína:</strong> Molécula formada por aminoácidos
+                                </div>
+                                <div class="glossary-item">
+                                    <strong>Gen:</strong> Segmento de ADN con información específica
+                                </div>
+                                <div class="glossary-item">
+                                    <strong>Melanina:</strong> Pigmento que da color a la piel
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><i class="fas fa-video"></i> Videos Recomendados</h3>
+                            <p>Busca en YouTube: "ADN para niños", "Genética explicada", "Diversidad humana"</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 El Rincón del Genoma | Del ADN a las proteínas, paso a paso 🧬</p>
+            <p>Educación científica de calidad para todos 🌍</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
